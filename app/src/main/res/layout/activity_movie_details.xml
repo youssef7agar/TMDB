@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".details.MovieDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:titleTextColor="@color/white"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/IMG_movie_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+    <TextView
+        android:id="@+id/TV_movie_name_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:transitionName="movie_title"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/IMG_movie_details"
+        tools:text="Possessor Uncut" />
+
+    <TextView
+        android:id="@+id/TV_movie_release_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/TV_movie_name_details"
+        app:layout_constraintTop_toBottomOf="@id/TV_movie_name_details"
+        tools:text="2020-10-02" />
+
+    <TextView
+        android:id="@+id/TV_movie_rating_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/TV_movie_release_details"
+        app:layout_constraintTop_toBottomOf="@id/TV_movie_name_details"
+        tools:text="(6.8)" />
+
+    <TextView
+        android:id="@+id/TV_movie_description_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/TV_movie_release_details"
+        tools:text="Tasya Vos, an elite corporate assassin, uses brain-implant technology to take control of other people’s bodies to terminate high-profile targets. As she sinks deeper into her latest assignment, Vos becomes trapped inside a mind that threatens to obliterate her." />
+
+    <TextView
+        android:id="@+id/TV_movie_adult_headline_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/adult"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/TV_movie_description_details"
+        app:layout_constraintTop_toBottomOf="@id/TV_movie_description_details" />
+
+    <TextView
+        android:id="@+id/TV_movie_adult_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/TV_movie_adult_headline_details"
+        app:layout_constraintTop_toBottomOf="@id/TV_movie_description_details"
+        tools:text="false" />
+
+    <TextView
+        android:id="@+id/TV_movie_language_headline_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/language"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/TV_movie_description_details"
+        app:layout_constraintTop_toBottomOf="@id/TV_movie_adult_headline_details" />
+
+    <TextView
+        android:id="@+id/TV_movie_language_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/TV_movie_language_headline_details"
+        app:layout_constraintTop_toBottomOf="@id/TV_movie_adult_headline_details"
+        tools:text="en" />
+
+    <TextView
+        android:id="@+id/TV_movie_genres_headline_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/genres"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/TV_movie_language_headline_details"
+        app:layout_constraintStart_toStartOf="@id/TV_movie_description_details"/>
+
+    <TextView
+        android:id="@+id/TV_movie_genres_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/TV_movie_language_headline_details"
+        app:layout_constraintStart_toEndOf="@id/TV_movie_genres_headline_details"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
