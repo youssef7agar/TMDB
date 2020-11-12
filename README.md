@@ -1,4 +1,5 @@
 # TMDB
+### This app is developed as a coding challenge for Fixed Solutions.
 ### Libraries:
   I used these libraries on such a small project because in real life there is no such a small app and I needed to show what I know<br/>
 ### Tools:
