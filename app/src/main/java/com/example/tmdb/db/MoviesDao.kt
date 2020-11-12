@@ -41,6 +41,4 @@ interface MoviesDao {
 
     @Query("SELECT * FROM ${Constants.MOVIES_TABLE_NAME} WHERE movieId=:id")
     fun getMovie(id: Int): LiveData<MovieWithGenres>
-
-    // TODO getMovie(id: Int): LiveData<MovieWithGenres>
 }
